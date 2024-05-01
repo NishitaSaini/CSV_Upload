@@ -1,0 +1,72 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif; /* Change your font family */
+}
+.headRowHeading{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.heading {
+   padding: 20px;
+}
+.headingText {
+   font-size: 3rem;
+   font-weight: bold;
+   text-align: center;
+   color: rgb(29, 4, 139);
+}
+#filePage {
+   display: flex;
+   /* background-color: #2F4F4F; */
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+}
+
+.container {
+   display: flex;
+   justify-content: center;
+}
+
+#sortTable {
+   border-collapse: collapse;
+   margin: 25px 0;
+   font-size: 0.9em;
+   min-width: 400px;
+   border-radius: 5px 5px 0 0;
+   overflow: hidden;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#sortTable thead {
+   align-items: center;
+   justify-content: center;
+}
+
+#sortTable thead tr {
+   background-color: #4522c2;
+   color: #ffffff;
+   text-align: left;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+#sortTable th,
+#sortTable td {
+   padding: 12px 15px;
+}
+
+#sortTable tbody tr {
+   border-bottom: 1px solid #dddddd;
+}
+
+#sortTable tbody tr:nth-of-type(even) {
+   background-color: #f3f3f3;
+}
+
+#sortTable tbody tr:last-of-type {
+   border-bottom: 2px solid #6d65db;
+}
