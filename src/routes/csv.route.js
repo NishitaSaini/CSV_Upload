@@ -8,7 +8,7 @@ const router = express.Router();
 const upload = multer({ dest: 'uploads/' });
 
 // Home Page
-router.get("/", csvController.home);
+router.get("/api/csv", csvController.home);
 // Upload CSV file
 router.post("/upload", csvController.uploadFile);
 // Delete a CSV File
