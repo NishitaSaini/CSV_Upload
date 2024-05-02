@@ -11,7 +11,7 @@
 <body>
     <div id="filePage">
         <div class="heading">
-            <a href="/api/csv" style="text-decoration: none;">
+            <a href="/" style="text-decoration: none;">
                 <h1 class="headingText">CSV Upload</h1>
             </a>
         </div>
@@ -71,10 +71,10 @@
 
         <nav id="pagingNav" aria-label="Page navigation example">
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="/api/csv/view/?file_id=<%= file._id %>&page=1">First</a></li>
+                <li class="page-item"><a class="page-link" href="/view/?file_id=<%= file._id %>&page=1">First</a></li>
                 <li class="page-item">
                     <%if(page!=1){%>
-                        <a class="page-link" href="/api/csv/view/?file_id=<%= file._id %>&page=<%=page-1%>">
+                        <a class="page-link" href="/view/?file_id=<%= file._id %>&page=<%=page-1%>">
                             <%=page-1%>
                         </a>
                         <%}%>
@@ -86,7 +86,7 @@
 
                 <li class="page-item">
                     <%if(page!=totalPages){%>
-                        <a class="page-link" href="/api/csv/view/?file_id=<%= file._id %>&page=<%=++page%>">
+                        <a class="page-link" href="/view/?file_id=<%= file._id %>&page=<%=++page%>">
                             <%=page%>
                         </a>
                         <%}%>
@@ -94,7 +94,7 @@
 
                 <li class="page-item">
 
-                    <a class="page-link" href="/api/csv/view/?file_id=<%= file._id %>&page=<%=totalPages%>">
+                    <a class="page-link" href="/view/?file_id=<%= file._id %>&page=<%=totalPages%>">
                         Last
                     </a>
 

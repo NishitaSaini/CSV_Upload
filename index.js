@@ -9,7 +9,7 @@ import {connnectToMongoose} from "./src/config/mongoose.js";
 dotenv.config();
 
 
-const port = 5000;
+const port = process.env.PORT ||5000;
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'src', 'public')));
 
 // Use CSV routes
-app.use('/api/csv', csvRoutes);
+app.use('/', csvRoutes);
 
 app.listen(port, () => {
     connnectToMongoose()

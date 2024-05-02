@@ -14,12 +14,12 @@
     <div class="main">
         <div class="container">
             <div class="heading">
-                <a href="/api/csv" style="text-decoration: none;">
+                <a href="/" style="text-decoration: none;">
                     <h1 style="color: rgba(28, 4, 136, 0.937)" class="headingText">CSV Upload</h1>
                 </a>
             </div>
 
-            <form class="habit-form" action="/api/csv/upload" method="POST" enctype="multipart/form-data">
+            <form class="habit-form" action="/upload" method="POST" enctype="multipart/form-data">
 
                 <div id="fileInput" class="mb-3" style="background-color: rgba(43, 6, 204, 0.937)">
                     <label for="formFileSm" class="form-label"
@@ -42,13 +42,13 @@
                             <div class="fileListRow">
                                 <div class="habitDsc">
                                     <a style="text-decoration: none;" class="habitShowAction"
-                                        href="/api/csv/view/?file_id=<%= file._id %>&page=1">
+                                        href="/view/?file_id=<%= file._id %>&page=1">
                                         <%=file.originalName%>
                                     </a>
                                 </div>
 
                                 <div>
-                                    <a href="/api/csv/delete/<%= file.file %>">
+                                    <a href="/delete/<%= file.file %>">
                                         <button class="btn btn-danger" style="font-size: 0.8rem;">Delete</button>
                                     </a>
                                 </div>

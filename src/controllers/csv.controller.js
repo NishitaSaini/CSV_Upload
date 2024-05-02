@@ -40,7 +40,7 @@ export const home = (async (req, res) => {
                          file: req.file.filename,
                      });
                      console.log("File saved to database");
-                     return res.redirect("/api/csv");
+                     return res.redirect("/");
                  } catch (error) {
                      console.log("Error saving file to database:", error);
                      return res.status(500).json({
@@ -49,7 +49,7 @@ export const home = (async (req, res) => {
                  }
              } else {
                  console.log("File should be of CSV Format :|");
-                 return res.redirect("/api/csv");
+                 return res.redirect("/");
              }
          });
      } catch (err) {
@@ -70,10 +70,10 @@ export const deleteFile = async (req, res) => {
        if (isFile) {
           await csvModel.deleteOne({ file: filename });
           console.log("file is deleted");
-          return res.redirect("/api/csv");
+          return res.redirect("/");
        } else {
           console.log("file not found :(");
-          return res.redirect("/api/csv");
+          return res.redirect("/");
        }
     } catch (error) {
        console.log(error);
